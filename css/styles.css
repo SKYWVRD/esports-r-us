@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 body {
     margin: 0;
     background-color: #333333;
 }
 
 .top-nav, .bottom-footer {
+    font-family: 'Bebas Neue', sans-serif;
     background-color: #1a1a1a
 }
 
@@ -35,4 +39,5 @@ body {
     justify-content: center;
     color: white;
     background-color: #1a1a1a;
+    font-size: 20px;
 }
