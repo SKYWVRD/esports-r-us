@@ -1,4 +1,7 @@
-.hero {
-    align-self: center;
+.hero-image {
+    flex-grow: 1;
+    background-image:url('../images/default-arena.jpg');
+    height: 100%;
+    background-position: center;
 }
 
