@@ -1,15 +1,38 @@
 body {
     margin: 0;
+    background-color: #333333;
 }
 
 .top-nav, .bottom-footer {
-    background-color: black;
-    
+    background-color: #1a1a1a
 }
+
+.top-nav {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.top-nav a, .bottom-footer a {
+    color: white;
+    text-decoration: none;   
+    padding: 5px; 
+}
+
+
+.top-nav > a {
+    font-size: 25px;
+}
+
+.top-nav a:hover, .bottom-footer a:hover {
+    color: purple;
+}
+
 
 .bottom-footer {
     margin-top: auto;
     display: flex;
     justify-content: center;
     color: white;
+    background-color: #1a1a1a;
 }
