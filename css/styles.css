@@ -6,6 +6,10 @@ body {
     background-color: #333333;
 }
 
+.nav-container, .bottom-footer {
+    background-color: #1a1a1a
+}
+
 .main-container {
     position: relative;
     min-height: 100vh;
@@ -13,27 +17,39 @@ body {
 
 .top-nav, .bottom-footer {
     font-family: 'Bebas Neue', sans-serif;
-    background-color: #1a1a1a
 }
 
 .top-nav {
     min-height: 50px;
     display: flex;
     align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    justify-content: space-between;
 }
 
-.top-nav a, .bottom-footer a {
+.nav-links {
+    justify-self: flex-end;
+}
+
+.nav-links a, .bottom-footer a {
     color: white;
     text-decoration: none;   
     padding: 5px; 
 }
 
 
-.top-nav > a {
+.nav-links> a {
     font-size: 25px;
+    color: white
 }
 
-.top-nav > .active{
+.nav-logo {
+    color: white;
+    font-size: 40px;
+}
+
+.nav-links > .active{
     text-decoration: underline;
     text-decoration-color: purple;
     text-decoration-thickness: 4px;
@@ -51,6 +67,5 @@ body {
     display: flex;
     justify-content: center;
     color: white;
-    background-color: #1a1a1a;
     font-size: 20px;
 }
