@@ -45,6 +45,7 @@
     width: 80vw;
     flex-wrap: wrap;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .top-news {
@@ -53,15 +54,17 @@
     border: 3px solid black;
     min-height: 300px;
     flex-wrap: wrap;
-    margin-right: 30px;
 }
 
 .left-column {
-    flex-grow: 3;
+    flex-grow: 6;
+    margin: 25px;
 }
 
 .right-column {
-    flex-grow: 1;
+    flex-grow: 4;
+    min-width: 260px;
+    margin:25px;
 }
 
 .top-news>.first-rank {
@@ -91,6 +94,13 @@
 .second-rank-second {
     flex-grow: 1;
 }
+
+
+.score-board{
+    border: 2px solid black;
+    height: 900px;
+}
+
 
 @keyframes fadeInAnimation {
     0% {

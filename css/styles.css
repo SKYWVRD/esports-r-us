@@ -11,12 +11,12 @@ body {
 }
 
 .main-container {
-    position: relative;
     min-height: 100vh;
 }
 
 .top-nav, .bottom-footer {
     font-family: 'Bebas Neue', sans-serif;
+    height: 60px;
 }
 
 .top-nav {
@@ -61,8 +61,6 @@ body {
 
 
 .bottom-footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     display: flex;
     justify-content: center;
