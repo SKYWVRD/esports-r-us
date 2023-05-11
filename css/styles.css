@@ -7,8 +7,7 @@ body {
 }
 
 .main-container {
-    display: flex;
-    flex-direction: column;
+    position: relative;
     min-height: 100vh;
 }
 
@@ -46,7 +45,9 @@ body {
 
 
 .bottom-footer {
-    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     color: white;
