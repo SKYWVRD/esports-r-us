@@ -1,8 +1,10 @@
-.hero-image {
+.hero, .hero-text {
+    min-height: 500px;
+}
+
+.hero {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    flex-grow: 1;
     background-image:url('../images/default-arena.jpg');
     background-position: center;
 }
@@ -10,20 +12,30 @@
 .hero-text {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    height: 100%;
     background-color: rgba(99, 99, 99, 0.534);
     color: white;
     justify-content: center;
     align-items: center;
+    padding: 5px;
 }
 
-.hero-text-heading {
+.hero-text-introduction, .hero-text-heading{
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 70px;
     animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
+
+.hero-text-heading {
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 100px;
+}
+
+.hero-text-introduction {
+    font-size: 50px;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 @keyframes fadeInAnimation {
