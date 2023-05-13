@@ -21,11 +21,12 @@
     padding: 5px;
 }
 
-.hero-text-introduction, .hero-text-heading, .news-item, .latest-news-heading{
+.hero-text-introduction, .hero-text-heading, .news-item, .latest-news-heading, .score-board-heading{
     font-family: 'Bebas Neue', sans-serif;
     animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    color: white;
 }
 
 .hero-text-heading {
@@ -65,6 +66,8 @@
 }
 
 .right-column {
+    display: flex;
+    flex-direction: column;
     flex-grow: 4;
     min-width: 250px;
     margin:25px;
@@ -123,7 +126,7 @@
     margin: 5px;
 }
 
-.latest-news-heading {
+.latest-news-heading, .score-board-heading {
     font-size: 40px;
 }
 
@@ -132,7 +135,7 @@
     color: white;
 }
 
-.latest-news-heading, .news-headline {
+.latest-news-heading, .news-headline, .score-board-heading {
     text-decoration: underline;
 }
 
@@ -167,6 +170,10 @@
 
 .news-text {
     flex-grow: 6;
+}
+
+.score-board-heading {
+    text-align: center;
 }
 
 
