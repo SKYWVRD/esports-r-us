@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/index.css">
+    <script type="text/javascript" src="./javascript/index.js" defer></script>
     <title>ESPORTS R US</title>
 </head>
 
-<body>
-    <div class='main-container'>
+<body onload="generateLatestNews()">
+    <div class='main-container' >
         <div class="nav-container">
             <nav class="top-nav">
                 <div class="nav-logo">
@@ -37,7 +38,7 @@
                 </div>
             </div>
             <div class="column-split-layout">
-                <div class="left-column">
+                <div class="left-column" >
                     <div class="top-news">
                         <div class="first-rank">
                             <div class="new-overlay">
@@ -53,10 +54,10 @@
                             </div>
                         </div>  
                     </div>
-                    <div class="latest-news">
-                        <div class="latest-news-heading">
-                            Latest News
-                        </div>
+                    <div class="latest-news-heading">
+                        Latest News
+                    </div>
+                    <div id="latest-news">
                         <div class="news-item">
                             <div class="news-image">
                                 Image
