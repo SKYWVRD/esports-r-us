@@ -67,7 +67,7 @@ async function generateLatestNews() {
 }
 
 function generateScore(){
-  return Math.floor(Math.random() *10);
+  return Math.floor(Math.random() *3);
 }
 
 function generateFileNameIndex(){

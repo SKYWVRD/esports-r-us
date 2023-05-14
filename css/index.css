@@ -164,12 +164,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-grow: 1;
+    flex-basis: 0;
+    margin: auto;
     padding: 5px;
 }
 
 .team-logo img {
     max-width: 75px;
+}
+
+.team-logo {
+    flex-grow: 1;
 }
 
 .news-item {
