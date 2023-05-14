@@ -43,7 +43,8 @@ async function getNews() {
 async function generateLatestNews() {
   let latestNews = await getNews();
   console.log(latestNews);
-  for (let i = 0; i < latestNews.length; i++) {
+
+  latestNews.map(newsItem => {
     const newsItemNode = document.createElement("div");
     newsItemNode.className = "news-item";
     const imageNode = document.createElement("div");
@@ -51,11 +52,11 @@ async function generateLatestNews() {
     const newsTextNode = document.createElement("div");
     newsTextNode.className = "news-text";
     const headlineNode = document.createElement("div");
-    const headlineTextNode = document.createTextNode(latestNews[i]["title"]);
+    const headlineTextNode = document.createTextNode(newsItem["title"]);
     headlineNode.appendChild(headlineTextNode);
     headlineNode.className = "news-headline";
     const summaryNode = document.createElement("div");
-    const summaryTextNode = document.createTextNode(latestNews[i]["summary"]);
+    const summaryTextNode = document.createTextNode(newsItem["summary"]);
     summaryNode.appendChild(summaryTextNode);
     summaryNode.className = "news-summary";
     newsItemNode.appendChild(imageNode);
@@ -63,7 +64,7 @@ async function generateLatestNews() {
     newsTextNode.appendChild(summaryNode);
     newsItemNode.appendChild(newsTextNode);
     newsSection.appendChild(newsItemNode);
-  }
+  });
 }
 
 function generateScore(){
