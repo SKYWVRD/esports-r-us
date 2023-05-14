@@ -11,7 +11,7 @@
     <title>ESPORTS R US</title>
 </head>
 
-<body onload="generateLatestNews()">
+<body onload="generatePage()">
     <div class='main-container' >
         <div class="nav-container">
             <nav class="top-nav">
@@ -40,15 +40,12 @@
                     <div class="top-news">
                         <div class="first-rank">
                             <div class="new-overlay">
-                                Test-1
                             </div>
                         </div>
                         <div class="second-rank-stack">
                             <div class="second-rank-first">
-                                Test-2
                             </div>
                             <div class="second-rank-second">
-                                Test-3
                             </div>
                         </div>  
                     </div>
@@ -59,10 +56,33 @@
                         
                     </div>                
                 </div>
-                <div class="right-column">
-                    <div class="score-board">
-                        <div class="score-board-heading">
+                <div class="right-column" onload="generateLatestScores()">
+                    <div id="score-board">
+                        <div id="score-board-heading">
                             Latest Scores
+                        </div>
+                        <div id="score-card-container">
+                            <div class="scorecard">
+                                <div class="left-team-column">
+                                    <div class="team-logo">
+                                        <img src="./images/team-logos/fnatic.png">
+                                    </div>
+                                    <div class="team-score">
+                                        1
+                                    </div>
+                                </div>
+                                <div class="scorecard-divider">
+                                    VS.
+                                </div>
+                                <div class="right-team-column">
+                                    <div class="team-logo">
+                                        <img src="./images/team-logos/godsent.png">
+                                    </div>
+                                    <div class="team-score">
+                                        2
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

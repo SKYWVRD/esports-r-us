@@ -12,6 +12,16 @@ const newsOptions = {
 const newsSection = document.getElementById("latest-news");
 let newsArray = [];
 
+const scoresSection = document.getElementById("score-board");
+const teamFileNames = [
+  "big.png",
+  "ence.png",
+  "fnatic.png",
+  "godsent.png",
+  "liquid.png",
+  "vitality",
+];
+
 async function getNews() {
   try {
     const response = await fetch(newsUrl, newsOptions);
@@ -32,7 +42,7 @@ async function getNews() {
 
 async function generateLatestNews() {
   let latestNews = await getNews();
-  console.log(latestNews)
+  console.log(latestNews);
   for (let i = 0; i < latestNews.length; i++) {
     const newsItemNode = document.createElement("div");
     newsItemNode.className = "news-item";
@@ -42,10 +52,10 @@ async function generateLatestNews() {
     newsTextNode.className = "news-text";
     const headlineNode = document.createElement("div");
     const headlineTextNode = document.createTextNode(latestNews[i]["title"]);
-    headlineNode.appendChild(headlineTextNode)
+    headlineNode.appendChild(headlineTextNode);
     headlineNode.className = "news-headline";
     const summaryNode = document.createElement("div");
-    const summaryTextNode = document.createTextNode(latestNews[i]['summary']);
+    const summaryTextNode = document.createTextNode(latestNews[i]["summary"]);
     summaryNode.appendChild(summaryTextNode);
     summaryNode.className = "news-summary";
     newsItemNode.appendChild(imageNode);
@@ -54,4 +64,39 @@ async function generateLatestNews() {
     newsItemNode.appendChild(newsTextNode);
     newsSection.appendChild(newsItemNode);
   }
+}
+
+async function generateLatestScores() {
+  for (let i = 0; i < 8; i++) {
+    const scorecardNode = document.createElement("div");
+    scorecardNode.innerHTML = `
+        <div class="scorecard">
+          <div class="left-team-column">
+              <div class="team-logo">
+                  <img src="./images/team-logos/fnatic.png">
+              </div>
+              <div class="team-score">
+                  1
+              </div>
+          </div>
+          <div class="scorecard-divider">
+              VS.
+          </div>
+          <div class="right-team-column">
+              <div class="team-logo">
+                  <img src="./images/team-logos/godsent.png">
+              </div>
+              <div class="team-score">
+                  2
+              </div>
+          </div>`;
+
+    scoresSection.appendChild(scorecardNode);
+  }
+}
+
+
+function generatePage(){
+  generateLatestNews();
+  generateLatestScores();
 }
