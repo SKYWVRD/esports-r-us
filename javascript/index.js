@@ -19,7 +19,7 @@ const teamFileNames = [
   "fnatic.png",
   "godsent.png",
   "liquid.png",
-  "vitality",
+  "vitality.png",
 ];
 
 async function getNews() {
@@ -66,17 +66,36 @@ async function generateLatestNews() {
   }
 }
 
+function generateScore(){
+  return Math.floor(Math.random() *10);
+}
+
+function generateFileNameIndex(){
+  return Math.floor(Math.random() * teamFileNames.length);
+}
+
 async function generateLatestScores() {
   for (let i = 0; i < 8; i++) {
+    leftTeamFile = generateFileNameIndex();
+    rightTeamFileSafe = false;
+    rightTeamFile = null;
+    while(!rightTeamFileSafe){
+      rightTeamFile = generateFileNameIndex();
+      if (rightTeamFile !== leftTeamFile){
+        rightTeamFileSafe = true;
+      }
+    }
+    leftTeamScore = generateScore();
+    rightTeamScore = generateScore();
     const scorecardNode = document.createElement("div");
+    scorecardNode.className = 'scorecard'
     scorecardNode.innerHTML = `
-        <div class="scorecard">
           <div class="left-team-column">
               <div class="team-logo">
-                  <img src="./images/team-logos/fnatic.png">
+                  <img src="./images/team-logos/${teamFileNames[leftTeamFile]}">
               </div>
               <div class="team-score">
-                  1
+                  ${leftTeamScore}
               </div>
           </div>
           <div class="scorecard-divider">
@@ -84,10 +103,10 @@ async function generateLatestScores() {
           </div>
           <div class="right-team-column">
               <div class="team-logo">
-                  <img src="./images/team-logos/godsent.png">
+                  <img src="./images/team-logos/${teamFileNames[rightTeamFile]}">
               </div>
               <div class="team-score">
-                  2
+                  ${rightTeamScore}
               </div>
           </div>`;
 

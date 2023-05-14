@@ -84,7 +84,7 @@
     }
   }
 
-.first-rank, .second-rank-first, .second-rank-second, #score-board {
+.first-rank, .second-rank-first, .second-rank-second{
     border: 4px solid purple;
     border-radius: 10px;
 
@@ -156,6 +156,7 @@
     justify-content: space-evenly;
     flex-basis: 0;
     align-items: center;
+    margin: 5px;
 }
 
 .left-team-column, .right-team-column {
